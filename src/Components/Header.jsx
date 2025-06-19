@@ -17,7 +17,7 @@ const Header = () => {
       <div className="container">
         <nav>
           <a href="#" className="logo">
-            <FaShieldAlt /> ABHIJITH
+            <FaShieldAlt /> ABHIJITH A
           </a>
           <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
             <li><a href="#about" onClick={closeMenu}>About</a></li>

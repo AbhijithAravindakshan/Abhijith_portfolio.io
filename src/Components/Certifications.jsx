@@ -6,7 +6,7 @@ const Certifications = () => {
       date: "2024",
       description: "Validates skills in ethical hacking, including footprinting and reconnaissance, scanning networks, enumeration, system hacking, malware threats, sniffing, social engineering, denial-of-service, session hijacking, evading IDS, firewalls, and honeypots.",
       image: "https://www.haec.gr/images/LifeLong/2022/Certified_Ethical_Hacker.jpg",
-      link: "https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/"
+      link: "https://aspen.eccouncil.org/Certificate/Certificate?a=eof6foV0K5/d/w5hmSyIRQ=="
     },
     {
       title: "Certified Penetration Testing (CPT)",
@@ -30,7 +30,7 @@ const Certifications = () => {
       date: "2024",
       description: "Covers foundational sql injection principles including security concepts, threats, vulnerabilities, and network defense strategies.",
       image: "https://www.eccouncil.org/cybersecurity-exchange/wp-content/uploads/2024/03/sql.png.webp",
-      link: "https://www.eccouncil.org/cybersecurity-exchange/sql-injection-attacks/"
+      link: "https://learn.eccouncil.org/certificate/a5ff5642-904b-4c66-a9d4-9e26bd6f2ba5?logged=true"
     }
   ];
 

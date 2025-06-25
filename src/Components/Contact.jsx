@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { FaEnvelope, FaMapMarkerAlt, FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
+import { SiTryhackme } from "react-icons/si";
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -64,6 +65,10 @@ const Contact = () => {
               <a href="https://www.instagram.com/mr_abhi_jith_/?__pwa=1#" className="social-link" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
               </a>
+              <a href="https://tryhackme.com/p/Mr.AA" className="social-link" target="_blank" rel="noopener noreferrer">
+                <SiTryhackme />
+              </a>
+
             </div>
           </div>
           <div className="contact-form">

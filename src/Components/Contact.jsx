@@ -46,7 +46,7 @@ const Contact = () => {
             <div className="contact-details">
               <div className="contact-item">
                 <i><FaEnvelope /></i>
-                <span>abhijitha.ksal5@gmail.com</span>
+                <span>abhijitha.ksa15@gmail.com</span>
               </div>
               <div className="contact-item">
                 <i><FaMapMarkerAlt /></i>

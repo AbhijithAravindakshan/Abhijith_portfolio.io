@@ -6,7 +6,7 @@ const Certifications = () => {
       date: "2024",
       description: "Validates skills in ethical hacking, including footprinting and reconnaissance, scanning networks, enumeration, system hacking, malware threats, sniffing, social engineering, denial-of-service, session hijacking, evading IDS, firewalls, and honeypots.",
       image: "https://www.haec.gr/images/LifeLong/2022/Certified_Ethical_Hacker.jpg",
-      link: "https://aspen.eccouncil.org/Certificate/Certificate?a=eof6foV0K5/d/w5hmSyIRQ=="
+      link: "https://drive.google.com/file/d/1sl-vtLAT1DwTxAa_Ya28Mch7-3-72o4T/view?usp=drive_link"
     },
     {
       title: "Certified Penetration Testing (CPT)",
@@ -14,7 +14,7 @@ const Certifications = () => {
       date: "2024",
       description: "Demonstrates expertise in penetration testing methodologies, tools, and techniques for identifying and exploiting vulnerabilities in systems and networks.",
       image: "https://www.measureup.com/media/wysiwyg/penetration_tester_certifications.jpg",
-      link: "https://www.eccouncil.org/programs/certified-penetration-testing-professional-cpt/"
+      link: "https://drive.google.com/file/d/1hqps0Y4HYsRr7TgCC06dTvURnsNoqT3F/view?usp=drive_link"
     },
     {
       title: "Google Cybersecurity Professional Certificate",

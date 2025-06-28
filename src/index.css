@@ -280,6 +280,16 @@ nav {
   color: var(--primary);
 }
 
+.skills-category {
+  font-size: 1.5rem;
+  margin-bottom: 20px; 
+}
+.skills-category h3{
+  color: rgb(156, 156, 156);
+  font-weight: 500;
+  top: 10px;
+}
+
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -300,6 +310,8 @@ nav {
   color: var(--darker);
   transform: translateY(-3px);
 }
+
+
 
 .about-image {
   flex: 1;

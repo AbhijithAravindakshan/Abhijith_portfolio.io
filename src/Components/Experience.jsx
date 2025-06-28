@@ -16,7 +16,7 @@ const Experience = () => {
                 <li>Led incident response efforts to mitigate risks</li>
                 <li>Implemented proactive security measures, reducing vulnerabilities</li>
               </ul>
-              <div className="timeline-date">Jan – December 2024</div>
+              <div className="timeline-date">January 2024 – jan 2025</div>
             </div>
           </div>
           <div className="timeline-item right">

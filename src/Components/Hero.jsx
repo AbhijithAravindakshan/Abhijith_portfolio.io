@@ -1,13 +1,13 @@
 import { FaDownload } from "react-icons/fa";
 import img from '../assets/about.png';
-import resumePDF from '../assets/ABHIJITH A_RESUME.pdf'
+import resumePDF from '../assets/AbhijithResume.pdf';
 
 const Hero = () => {
   const handleDownload = () => {
-    // Using public folder approach instead
+    // Create a temporary anchor element
     const link = document.createElement('a');
-    link.href = {resumePDF} // PDF should be in public folder
-    link.download = 'Abhijith_A_Resume.pdf';
+    link.href = resumePDF; // Use the imported PDF directly
+    link.download = 'AbhijithResume.pdf'; // This will force download with this filename
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -1,65 +1,71 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Loader from './Components/Loader';
 import Header from './Components/Header';
 import Hero from './Components/Hero';
 import About from './Components/About';
 import Experience from './Components/Experience';
 import Skills from './Components/Skills';
-import Certifications from './Components/Certifications'; // Import the new Certifications component
+import Certifications from './Components/Certifications';
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
+import './Components/Styles/Loader.css';
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
+    // This will run only after loader completes
+    if (!isLoading) {
+      // Initialize smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
       });
-    });
 
-    // Add animation when scrolling
-    const observerOptions = {
-      threshold: 0.1
-    };
+      // Initialize intersection observer for animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, { threshold: 0.1 });
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-        }
+      document.querySelectorAll('.timeline-item, .project-card, .skill, .certification-card').forEach(element => {
+        observer.observe(element);
       });
-    }, observerOptions);
 
-    document.querySelectorAll('.timeline-item, .project-card, .skill, .certification-card').forEach(element => {
-      observer.observe(element);
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+      return () => observer.disconnect();
+    }
+  }, [isLoading]);
 
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <About />
-      <Experience />
-      <Skills />
-      <Certifications /> {/* Add this component */}
-      <Projects />
-      <Contact />
-      <Footer />
+      {isLoading ? (
+        <Loader onLoaded={() => setIsLoading(false)} />
+      ) : (
+        <>
+          <Header />
+          <Hero />
+          <About />
+          <Experience />
+          <Skills />
+          <Certifications />
+          <Projects />
+          <Contact />
+          <Footer />
+        </>
+      )}
     </div>
   );
 };
